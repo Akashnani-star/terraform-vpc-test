@@ -2,7 +2,7 @@ resource "aws_route_table" "test-route-table" {
   vpc_id = aws_vpc.test-vpc.id
 
   route {
-    cidr_block = "0.0.0.0/0"
+    cidr_block = var.cidr_block_rt
     gateway_id = aws_internet_gateway.test-internet-gw.id
   }
   
